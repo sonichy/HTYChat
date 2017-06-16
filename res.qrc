@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icon.png</file>
+        <file>logo.png</file>
+        <file>bg.jpg</file>
+        <file>home.png</file>
+        <file>mail.png</file>
+        <file>menu.png</file>
+        <file>add.png</file>
+        <file>qzone.png</file>
+        <file>img.png</file>
+        <file>warn.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ItemFind</class>
+ <widget class="QWidget" name="ItemFind">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>130</width>
+    <height>60</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLabel" name="labelAvantar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="res.qrc">:/icon.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelName">
+   <property name="geometry">
+    <rect>
+     <x>65</x>
+     <y>3</y>
+     <width>55</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>昵称</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelSex">
+   <property name="geometry">
+    <rect>
+     <x>65</x>
+     <y>20</y>
+     <width>16</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>性</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelDomicile">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>20</y>
+     <width>50</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>居住地</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButtonAdd">
+   <property name="geometry">
+    <rect>
+     <x>65</x>
+     <y>40</y>
+     <width>50</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;background-color:rgb(0,155,219)</string>
+   </property>
+   <property name="text">
+    <string>+好友</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelAccount">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>40</y>
+     <width>55</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>ID</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections/>
+</ui>
