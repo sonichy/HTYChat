@@ -1,4 +1,6 @@
 # Qt 海天鹰聊天 1.0 Alpha
+Linux 平台基于 Qt + MYSQL 的聊天程序。  
+已编译好的 HTYChat 程序适用 64 位 Linux 系统 Qt5 环境，双击运行，其他版本请自行编译。  
 ###注册
 ![alt](reg.jpg)  
 注意：密码现在还未加密，请勿使用常用密码！
@@ -8,9 +10,6 @@
 ![alt](form.jpg)  
 ### 聊天
 ![alt](chat.png)  
-
-Linux 平台基于 Qt + MYSQL 的聊天程序。  
-已编译好的 HTYChat 程序适用 64 位 Linux 系统 Qt5 环境，双击运行，其他版本请自行编译。  
 
 ### 依赖：
 Qt5 安装 MYSQL 插件：sudo apt-get install libqt5sql5-mysql
