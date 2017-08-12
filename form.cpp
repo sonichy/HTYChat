@@ -25,6 +25,7 @@ Form::Form(QWidget *parent) :
     ui(new Ui::Form)
 {
     ui->setupUi(this);
+    setStyleSheet("QPushButton::menu-indicator{width:0px;}");
     setWindowFlags((windowFlags() | Qt::CustomizeWindowHint) & ~Qt::WindowMaximizeButtonHint);
     move(QApplication::desktop()->width() - width() - 100, 0);
     for(int c=2;c<11;c++){

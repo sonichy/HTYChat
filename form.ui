@@ -330,6 +330,12 @@
           <iconset resource="res.qrc">
            <normaloff>:/menu.png</normaloff>:/menu.png</iconset>
          </property>
+         <property name="iconSize">
+          <size>
+           <width>16</width>
+           <height>16</height>
+          </size>
+         </property>
          <property name="flat">
           <bool>true</bool>
          </property>

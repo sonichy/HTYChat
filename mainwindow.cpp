@@ -20,14 +20,14 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->lineEditPassword,SIGNAL(returnPressed()),this,SLOT(on_pushButtonLogin_clicked()));
     connect(ui->pushButtonRegister,SIGNAL(pressed()),this,SLOT(formRegister()));
     QSqlDatabase db=QSqlDatabase::addDatabase("QMYSQL");
-    //db.setHostName("localhost");
-    //db.setUserName("root");
-    //db.setPassword("0106105");
-    //db.setDatabaseName("htychat");
-    db.setHostName("123.56.70.166");
-    db.setUserName("devhaitian");
-    db.setPassword("dYeAsreEM4");
-    db.setDatabaseName("devhaitian");
+    db.setHostName("localhost");
+    db.setUserName("root");
+    db.setPassword("0106105");
+    db.setDatabaseName("htychat");
+//    db.setHostName("123.56.70.166");
+//    db.setUserName("devhaitian");
+//    db.setPassword("dYeAsreEM4");
+//    db.setDatabaseName("devhaitian");
     if(db.open()){
         qDebug()<<"Open database suceed";
         //db.exec("Create Database If Not Exists htychat");
