@@ -163,48 +163,18 @@ void Form::profile()
         formProfile->ui->labelSex->setText(sex);
         formProfile->ui->labelRegTime->setText(regtime.toString("yyyy-M-d H:m:s"));
         formProfile->ui->labelBirthday->setText(birthday.toString("yyyy-M-d"));
-        formProfile->ui->labelAvantarUrl->setText(urlAvantar);
-
-        //qDebug() << "avantar" << surl;
-        QNetworkAccessManager *manager = new QNetworkAccessManager(this);
-        connect(manager, SIGNAL(finished(QNetworkReply*)), this, SLOT(replyPixmapProfile(QNetworkReply*)));
-        manager->get(QNetworkRequest(QUrl(urlAvantar)));
+        formProfile->ui->labelAvantar->setPixmap(ui->pushButtonAvantar->icon().pixmap(60,60));
     }
     formProfile->show();
 }
 
-void Form::replyPixmapProfile(QNetworkReply* reply){
-    qDebug() << "replyProfile" << reply->error();
-    QPixmap pixmap;
-    pixmap.loadFromData(reply->readAll());
-    formProfile->ui->labelAvantar->setPixmap(pixmap.scaled(60,60));
-    formProfile->setWindowIcon(QIcon(pixmap));
-}
-
-//void Form::saveProfile()
+//void Form::replyPixmap(QNetworkReply* reply)
 //{
-//    QSqlQuery query;
-//    QString sql = "update user set avantar='" + formProfile->ui->lineEditAvantar->text() + "',name='" + formProfile->ui->lineEditName->text() + "',sex='" + formProfile->ui->comboBoxSex->currentText() + "',birthday='" + formProfile->ui->dateEditBirthday->date().toString("yyyy/M/d") + "',domicile='" + formProfile->ui->lineEditDomicile->text() + "',phonenumber=" + formProfile->ui->lineEditPhoneNumber->text() + ",email='" + formProfile->ui->lineEditEmail->text() + "',homepage='" + formProfile->ui->lineEditHomepage->text() + "',signature='" + formProfile->ui->textEditSignature->toPlainText() + "' where id=" + QString::number(id);
-//    bool b=query.exec(sql);
-//    qDebug() << sql << "->" << b;
-//    ui->labelName->setText(formProfile->ui->lineEditName->text());
-//    //ui->labelSignature->setText(formProfile->ui->textEditSignature->toPlainText());
-//    QFont font(ui->labelSignature->font());
-//    QFontMetrics FM(font);
-//    ui->labelSignature->setText(FM.elidedText(formProfile->ui->textEditSignature->toPlainText(), Qt::ElideRight, ui->labelSignature->width()));
-//    ui->labelSignature->setToolTip(formProfile->ui->textEditSignature->toPlainText());
-//    QNetworkAccessManager *manager = new QNetworkAccessManager(this);
-//    connect(manager, SIGNAL(finished(QNetworkReply*)), this, SLOT(replyPixmap(QNetworkReply*)));
-//    manager->get(QNetworkRequest(QUrl(formProfile->ui->lineEditAvantar->text())));
+//    qDebug() << "reply" << reply->error();
+//    QPixmap pixmap;
+//    pixmap.loadFromData(reply->readAll());
+//    ui->pushButtonAvantar->setIcon(QIcon(pixmap.scaled(60,60)));
 //}
-
-void Form::replyPixmap(QNetworkReply* reply)
-{
-    qDebug() << "reply" << reply->error();
-    QPixmap pixmap;
-    pixmap.loadFromData(reply->readAll());
-    ui->pushButtonAvantar->setIcon(QIcon(pixmap.scaled(60,60)));
-}
 
 void Form::TWContextMenu(const QPoint &position)
 {

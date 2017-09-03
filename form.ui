@@ -66,6 +66,9 @@
          <property name="cursor">
           <cursorShape>PointingHandCursor</cursorShape>
          </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
          <property name="text">
           <string/>
          </property>
@@ -78,6 +81,9 @@
            <width>60</width>
            <height>60</height>
           </size>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -150,6 +156,9 @@
              <property name="cursor">
               <cursorShape>PointingHandCursor</cursorShape>
              </property>
+             <property name="focusPolicy">
+              <enum>Qt::NoFocus</enum>
+             </property>
              <property name="toolTip">
               <string>主页</string>
              </property>
@@ -175,6 +184,9 @@
              </property>
              <property name="cursor">
               <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="focusPolicy">
+              <enum>Qt::NoFocus</enum>
              </property>
              <property name="toolTip">
               <string>邮箱</string>
@@ -320,6 +332,9 @@
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
          <property name="toolTip">
           <string>菜单</string>
          </property>
@@ -348,6 +363,9 @@
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
          </property>
          <property name="toolTip">
           <string>添加好友</string>

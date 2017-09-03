@@ -37,8 +37,7 @@ private slots:
     void lock();
     void chat(int row, int column);
     void profile();
-    void replyPixmap(QNetworkReply*);
-    void replyPixmapProfile(QNetworkReply*);
+    //void replyPixmap(QNetworkReply*);
     void TWContextMenu(const QPoint &position);
 };
 

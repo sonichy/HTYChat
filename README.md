@@ -7,7 +7,7 @@ Linux 平台基于 Qt + MYSQL 的聊天程序。
 ### 登录
 ![alt](login.jpg)  
 ### 联系人
-![alt](form.jpg)  
+![alt](form.png)  
 ### 聊天
 ![alt](chat.png)  
 

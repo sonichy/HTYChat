@@ -61,6 +61,9 @@
          <property name="cursor">
           <cursorShape>PointingHandCursor</cursorShape>
          </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
          <property name="toolTip">
           <string>Alt + C</string>
          </property>
@@ -73,6 +76,9 @@
         <widget class="QPushButton" name="pushButtonSend">
          <property name="cursor">
           <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
          </property>
          <property name="toolTip">
           <string>Ctrl + 回车</string>
@@ -113,6 +119,9 @@
        <property name="cursor">
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
        <property name="text">
         <string/>
        </property>
@@ -141,6 +150,9 @@
        </property>
        <property name="cursor">
         <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
        </property>
        <property name="text">
         <string>昵称</string>
@@ -206,6 +218,9 @@
        <property name="cursor">
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
        <property name="toolTip">
         <string>打开主页</string>
        </property>
@@ -233,6 +248,9 @@
          </property>
          <property name="cursor">
           <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
          </property>
          <property name="text">
           <string/>
@@ -275,6 +293,9 @@
          </property>
          <property name="cursor">
           <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
          </property>
          <property name="text">
           <string>消息记录</string>

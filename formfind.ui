@@ -31,6 +31,9 @@
        </item>
        <item>
         <widget class="QPushButton" name="pushButtonFind">
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
          <property name="styleSheet">
           <string notr="true">color:white;background-color:rgb(0,155,219)</string>
          </property>

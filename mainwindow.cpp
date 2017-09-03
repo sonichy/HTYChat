@@ -9,6 +9,7 @@
 #include <QDebug>
 #include <QStandardPaths>
 #include <QDir>
+#include <QPainter>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -24,10 +25,6 @@ MainWindow::MainWindow(QWidget *parent) :
     db.setUserName("root");
     db.setPassword("0106105");
     db.setDatabaseName("htychat");
-//    db.setHostName("123.56.70.166");
-//    db.setUserName("devhaitian");
-//    db.setPassword("dYeAsreEM4");
-//    db.setDatabaseName("devhaitian");
     if(db.open()){
         qDebug()<<"Open database suceed";
         //db.exec("Create Database If Not Exists htychat");
@@ -144,8 +141,15 @@ void MainWindow::on_pushButtonLogin_clicked()
             loop.exec();
             QPixmap pixmap;
             pixmap.loadFromData(reply->readAll());
-            form->ui->tableWidgetContact->item(i,0)->setIcon(QIcon(pixmap.scaled(50,50)));
-
+            QPixmap pixmapa(60,60);
+            pixmapa.fill(Qt::transparent);
+            QPainter painter(&pixmapa);
+            painter.setRenderHints(QPainter::Antialiasing | QPainter::SmoothPixmapTransform);
+            QPainterPath ppath;
+            ppath.addEllipse(0, 0, 60, 60);
+            painter.setClipPath(ppath);
+            painter.drawPixmap(0, 0, 60, 60, pixmap);
+            form->ui->tableWidgetContact->item(i,0)->setIcon(QIcon(pixmapa.scaled(50,50)));
             i++;
         }
         form->ui->tableWidgetContact->resizeColumnsToContents();
@@ -163,7 +167,17 @@ void MainWindow::replyPixmapAccount(QNetworkReply* reply){
     QString path = pathCache + "/" + QString::number(id) + ".jpg";
     qDebug() << "pixmap.save(" << path << ")";
     pixmap.save(path,0,100);
-    form->ui->pushButtonAvantar->setIcon(QIcon(pixmap.scaled(60,60)));
+    //QPixmap pixmap(avantar);
+    QPixmap pixmapa(60,60);
+    pixmapa.fill(Qt::transparent);
+    QPainter painter(&pixmapa);
+    painter.setRenderHints(QPainter::Antialiasing | QPainter::SmoothPixmapTransform);
+    QPainterPath ppath;
+    ppath.addEllipse(0, 0, 60, 60);
+    painter.setClipPath(ppath);
+    painter.drawPixmap(0, 0, 60, 60, pixmap);
+    //ui->labelAvantar->setPixmap(pixmap);
+    form->ui->pushButtonAvantar->setIcon(QIcon(pixmapa.scaled(60,60)));
     close();
 }
 
