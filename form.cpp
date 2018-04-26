@@ -33,7 +33,7 @@ Form::Form(QWidget *parent) :
     }
     connect(ui->pushButtonAvantar,SIGNAL(pressed()),this,SLOT(profile()));
 
-    submenu=new QMenu(this);
+    submenu = new QMenu(this);
     //setContextMenuPolicy(Qt::CustomContextMenu);
     QAction *logout=new QAction("注销",this);
     QAction *lock=new QAction("锁定",this);
@@ -59,7 +59,7 @@ Form::~Form()
 }
 
 void Form::about(){
-    QMessageBox MBAbout(QMessageBox::NoIcon, "关于", "海天鹰聊天 1.0 Alpha\n一款基于 Qt + MYSQL 的聊天程序。\n作者：黄颖\nE-mail: sonichy@163.com\n主页：sonichy.96.lt\n参考：\n腾讯QQ");
+    QMessageBox MBAbout(QMessageBox::NoIcon, "关于", "海天鹰聊天 1.0 Alpha\n一款基于 Qt + MYSQL 的聊天程序。\n作者：黄颖\nE-mail: sonichy@163.com\n主页：https://github.com/sonichy\n参考：\n腾讯QQ");
     MBAbout.setIconPixmap(QPixmap(":/icon.png"));
     MBAbout.exec();
 }
