@@ -25,6 +25,8 @@ private slots:
     void registerAccount();
     void getAvantar();
     void replyPixmap(QNetworkReply*);
+    void genVerificationCode();
+
 };
 
 #endif // FORMREG_H
