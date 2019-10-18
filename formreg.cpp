@@ -100,14 +100,12 @@ void FormReg::genID()
 
 void FormReg::genVerificationCode()
 {
-    QString s = "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,0,1,2,3,4,5,6,7,8,9";
-    QStringList SL = s.split(",");
+    char s[] = {"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"};
     QString VC = "";
-    qsrand(QTime(0,0,0).secsTo(QTime::currentTime()));
+    qsrand(clock());
     for(int i=0; i<4; i++){
-        int n = qrand() % 62;
-        qDebug() << n;
-        VC += SL.at(n);
+        int n = qrand() % strlen(s);
+        VC += QString(s[n]);
     }
     ui->pushButton_genVerificationCode->setText(VC);
 }
