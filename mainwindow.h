@@ -31,6 +31,10 @@ private slots:
     void replyPixmapAccount(QNetworkReply*);
     //void replyPixmapContact(QNetworkReply*);
     void formRegister();
+
+protected:
+    //void paintEvent(QPaintEvent *event);
+
 };
 
 #endif // MAINWINDOW_H

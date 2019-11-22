@@ -183,8 +183,8 @@ void MainWindow::replyPixmapAccount(QNetworkReply* reply){
 
 void MainWindow::formRegister()
 {
-    FormReg *formreg=new FormReg;
-    formreg->show();
+    FormReg *formReg = new FormReg;
+    formReg->show();
 }
 
 //void MainWindow::replyPixmapContact(QNetworkReply* reply)
@@ -193,4 +193,10 @@ void MainWindow::formRegister()
 //    QPixmap pixmap;
 //    pixmap.loadFromData(reply->readAll());
 //    form->ui->tableWidgetContact->item(i-1,0)->setIcon(QIcon(pixmap.scaled(50,50)));
+//}
+
+//void MainWindow::paintEvent(QPaintEvent *event)
+//{
+//    QPainter painter(this);
+//    painter.drawPixmap(rect(), QPixmap(":/bg.jpg"));
 //}

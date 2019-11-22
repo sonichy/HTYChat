@@ -17,6 +17,9 @@
    <iconset resource="res.qrc">
     <normaloff>:/icon.png</normaloff>:/icon.png</iconset>
   </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <widget class="QWidget" name="centralWidget">
    <property name="styleSheet">
     <string notr="true"/>
@@ -152,7 +155,7 @@
       <item row="0" column="0" colspan="4">
        <widget class="QLabel" name="labelBanner">
         <property name="styleSheet">
-         <string notr="true">background-image: url(:/bg.jpg);</string>
+         <string notr="true">background-image:url(&quot;:/bg.jpg&quot;)</string>
         </property>
         <property name="text">
          <string/>
